@@ -4,12 +4,12 @@
 </template>
 
 <script setup lang="ts">
-import { useStore } from 'vuex'
-import { computed } from 'vue'
+import { useStore } from 'vuex';
+import { computed } from 'vue';
 
-const store = useStore()
-const count = computed(() => store.state.count)
+const store = useStore();
+const count = computed(() => store.state.count);
 const increment = () => {
-  store.commit('increment')
-}
+  store.commit('increment');
+};
 </script>
