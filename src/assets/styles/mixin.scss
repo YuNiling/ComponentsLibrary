@@ -1,0 +1,5 @@
+$color: red;
+@mixin box {
+  border: 10px solid blue;
+  padding: 20px;
+}

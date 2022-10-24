@@ -13,3 +13,10 @@ const increment = () => {
   store.commit('increment');
 };
 </script>
+
+<style lang="scss" scoped>
+h1 {
+  color: $color;
+  @include box;
+}
+</style>
