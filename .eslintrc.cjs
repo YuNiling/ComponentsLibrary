@@ -46,5 +46,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['off'],
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-inferrable-types': 'off', // 关闭类型推断
   },
 };

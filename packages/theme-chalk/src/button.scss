@@ -1,0 +1,85 @@
+@use './common/var' as *;
+@use './mixins/config' as *;
+@use './mixins/function' as *;
+
+$com: 'button' !default;
+
+.#{$namespace}-#{$com} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: getCssVar($com, 'height');
+  white-space: nowrap;
+  cursor: pointer;
+  color: getCssVar('text-color', 'regular');
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: getCssVar($com, 'font-weight');
+  vertical-align: middle;
+  background-color: getCssVar('bg-color');
+  border: 1px solid getCssVar('border-color', 'regular');
+  padding: getCssVar($com, 'padding');
+  border-radius: 4px;
+
+  &--primary {
+    color: getCssVar('text-color');
+    background-color: getCssVar('bg-color', 'primary');
+    border-color: getCssVar('border-color', 'primary');
+    &.is-plain {
+      color: getCssVar('text-color', 'primary');
+      background-color: getCssVar('color', 'primary', 'lighter');
+      border-color: getCssVar('color', 'primary', 'light');
+    }
+  }
+
+  &--success {
+    color: getCssVar('text-color');
+    background-color: getCssVar('bg-color', 'success');
+    border-color: getCssVar('border-color', 'success');
+    &.is-plain {
+      color: getCssVar('text-color', 'success');
+      background-color: getCssVar('color', 'success', 'lighter');
+      border-color: getCssVar('color', 'success', 'light');
+    }
+  }
+
+  &--info {
+    color: getCssVar('text-color');
+    background-color: getCssVar('bg-color', 'info');
+    border-color: getCssVar('border-color', 'info');
+    &.is-plain {
+      color: getCssVar('text-color', 'info');
+      background-color: getCssVar('color', 'info', 'lighter');
+      border-color: getCssVar('color', 'info', 'light');
+    }
+  }
+
+  &--warning {
+    color: getCssVar('text-color');
+    background-color: getCssVar('bg-color', 'warning');
+    border-color: getCssVar('border-color', 'warning');
+    &.is-plain {
+      color: getCssVar('text-color', 'warning');
+      background-color: getCssVar('color', 'warning', 'lighter');
+      border-color: getCssVar('color', 'warning', 'light');
+    }
+  }
+
+  &--danger {
+    color: getCssVar('text-color');
+    background-color: getCssVar('bg-color', 'danger');
+    border-color: getCssVar('border-color', 'danger');
+    &.is-plain {
+      color: getCssVar('text-color', 'danger');
+      background-color: getCssVar('color', 'danger', 'lighter');
+      border-color: getCssVar('color', 'danger', 'light');
+    }
+  }
+
+  &.is-round {
+    border-radius: getCssVar($com, 'border-radius');
+  }
+}

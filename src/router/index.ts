@@ -1,12 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/components/Home.vue';
+
+const routes = [
+  {
+    path: '/',
+    redirect: '/components/Button',
+  },
+  {
+    title: '按钮',
+    name: 'Button',
+    path: '/components/Button',
+    component: () => import('../../packages/components/Button/docs/README.md'),
+    // component: () => import('../../packages/components/Button/docs/demo.vue'),
+  },
+];
 
 export default createRouter({
   history: createWebHistory(),
-  routes: [
-    {
-      path: '/',
-      component: Home,
-    },
-  ],
+  routes,
+  scrollBehavior(to: any, from: any) {
+    if (to.path !== from.path) {
+      return { top: 0 };
+    }
+  },
 });

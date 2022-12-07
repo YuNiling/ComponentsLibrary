@@ -5,7 +5,7 @@ module.exports = {
     },
     'postcss-pxtorem': {
       rootValue({ file }) {
-        return 16
+        return 16;
       },
       unitPrecision: 2, //保留rem小数点多少位
       propList: ['*'],
@@ -13,7 +13,7 @@ module.exports = {
         // if (/src/.test(e)) {
         //   return false
         // }
-        return true
+        return true;
       },
     },
   },

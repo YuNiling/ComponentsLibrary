@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --config ./build/base.config.ts",
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
-    "prettier": "prettier --write  ."
+    "prettier": "prettier --write  .",
+    "build": "vue-tsc --noEmit && vite build --config ./build/base.config.ts",
+    "build:lib": "vue-tsc --noEmit && vite build --config ./build/lib.config.ts"
   },
   "dependencies": {
     "vue": "^3.2.37",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.7.18",
+    "@types/prismjs": "^1.26.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "@vitejs/plugin-vue": "^3.1.0",
@@ -31,11 +33,13 @@
     "eslint-plugin-vue": "^9.6.0",
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.7.1",
+    "prismjs": "^1.29.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.0",
     "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-md": "^0.20.4",
     "vue-eslint-parser": "^9.1.0",
     "vue-tsc": "^0.40.4"
   }

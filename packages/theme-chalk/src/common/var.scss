@@ -1,0 +1,93 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../mixins/function.scss' as *;
+
+$colors: () !default;
+$colors: map.deep-merge(
+  (
+    'primary': (
+      'base': #409eff,
+      'light': #a0cfff,
+      'lighter': #ecf5ff,
+    ),
+    'success': (
+      'base': #67c23a,
+      'light': #b3e19d,
+      'lighter': #f0f9eb,
+    ),
+    'info': (
+      'base': #909399,
+      'light': #c8c9cc,
+      'lighter': #f4f4f5,
+    ),
+    'warning': (
+      'base': #e6a23c,
+      'light': #f3d19e,
+      'lighter': #fdf6ec,
+    ),
+    'danger': (
+      'base': #f56c6c,
+      'light': #fab6b6,
+      'lighter': #fef0f0,
+    ),
+  ), 
+  $colors
+);
+
+$color-primary: map.get($colors, 'primary', 'base');
+$color-success: map.get($colors, 'success', 'base');
+$color-info: map.get($colors, 'info', 'base');
+$color-warning: map.get($colors, 'warning', 'base');
+$color-danger: map.get($colors, 'danger', 'base');
+
+$text-color: () !default;
+$text-color: map.merge(
+  (
+    '': #fff,
+    'regular': #606266,
+    'primary': $color-primary,
+    'success': $color-success,
+    'info': $color-info,
+    'warning': $color-warning,
+    'danger': $color-danger,
+  ),
+  $text-color
+);
+
+$bg-color: () !default;
+$bg-color: map.merge(
+  (
+    '': #fff,
+    'primary': $color-primary,
+    'success': $color-success,
+    'info': $color-info,
+    'warning': $color-warning,
+    'danger': $color-danger,
+  ),
+  $bg-color
+);
+
+$border-color: () !default;
+$border-color: map.merge(
+  (
+    '': #fff,
+    'regular': #dcdfe6,
+    'primary': $color-primary,
+    'success': $color-success,
+    'info': $color-info,
+    'warning': $color-warning,
+    'danger': $color-danger,
+  ),
+  $border-color
+);
+
+$button: () !default;
+$button: map.merge(
+  (
+    'border-radius': 20px,
+    'height': 32px,
+    'font-weight': 500,
+    'padding': 8px 15px,
+  ),
+  $button
+);
