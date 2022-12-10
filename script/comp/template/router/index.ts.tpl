@@ -4,13 +4,7 @@ const routes = [
   {
     path: '/',
     redirect: '/components/Button',
-  },
-  {
-    title: '按钮',
-    name: 'Button',
-    path: '/components/Button',
-    component: () => import('@packages/components/Button/docs/README.md'),
-  },
+  },{{ routes }},
 ];
 
 export default createRouter({

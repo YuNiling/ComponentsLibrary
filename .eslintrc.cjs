@@ -16,13 +16,12 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['vue', 'prettier', '@typescript-eslint'],
+  plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
-        singleQuote: true,
       },
     ],
     // 处理在Ts中使用{}作为参数时报错问题

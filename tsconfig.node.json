@@ -6,7 +6,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "alwaysStrict": false
+    "alwaysStrict": false,
+    "allowJs": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["build/base.config.ts"]
 }
