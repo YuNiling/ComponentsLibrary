@@ -430,3 +430,48 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 .prism-previewer-easing.prism-previewer-easing circle {
   fill: transparent;
 }
+
+html.dark code[class*='language-'],
+html.dark pre[class*='language-']{
+  background-color: transparent;
+}
+
+html.dark .token.doctype, 
+html.dark .token.punctuation, 
+html.dark .token.entity {
+  color: #89ddff;
+}
+
+html.dark .token.tag, 
+html.dark .token.builtin {
+  color: #3375b9;
+}
+
+html.dark [class*=language-] code {
+  color: #e5eaf3;
+}
+
+html.dark .token.keyword {
+  color: #89ddff;
+}
+
+html.dark .token.function {
+  color: #82aaff;
+}
+
+html.dark .token.attr-value > .token.punctuation.attr-equals,
+html.dark .token.punctuation {
+  color: #89ddff;
+}
+
+html.dark .token.attr-name, 
+html.dark .token.property, 
+html.dark .token.entity {
+  color: #c792ea;
+}
+
+html.dark .token.atrule, 
+html.dark .token.attr-value, 
+html.dark .token.selector {
+  color: #89ddff;
+}

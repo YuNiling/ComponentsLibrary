@@ -2,10 +2,16 @@
   <div class="doc-box">
     <header>
       <div class="logo">Yl.Service</div>
-      <!-- <div class="theme-radio">
-        <span :class="{ active: theme === 'default' }" @click="themeChange('default')">默认</span>
-        <span :class="{ active: theme === 'brain' }" @click="themeChange('brain')">大脑</span>
-      </div> -->
+      <div
+        class="switch"
+        :class="{
+          light: theme === 'default',
+          dark: theme === 'dark',
+        }"
+        @click="themeChange"
+      >
+        <i class="switch__icon"></i>
+      </div>
     </header>
     <section>
       <aside>
@@ -24,12 +30,12 @@
 import { reactive, ref } from 'vue';
 import ComponentList from '../packages/list.json';
 
-const theme = ref<'default' | 'brain'>('default');
+const theme = ref<'default' | 'dark'>('default');
 
 // 主题切换
-const themeChange = (label: 'default' | 'brain') => {
-  theme.value = label;
-  window.document.documentElement.setAttribute('class', label);
+const themeChange = () => {
+  theme.value = theme.value === 'default' ? 'dark' : 'default';
+  window.document.documentElement.setAttribute('class', theme.value);
 };
 
 const data = reactive({
@@ -86,31 +92,86 @@ $btn-radius: 3px;
     padding: 15px;
   }
 }
-.theme-radio {
-  padding: 15px;
+.switch {
   cursor: pointer;
   z-index: 999;
-
-  span {
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  background: #f2f2f2;
+  position: relative;
+  top: 15px;
+  right: 15px;
+  .switch__icon {
     display: inline-block;
-    padding: 0px 10px;
-    border: 1px solid #409eff;
-    color: #111;
-    font-size: 15px;
-    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+  }
+  &.light {
+    .switch__icon {
+      background: url('./assets/images/light.png') no-repeat;
+      background-size: 100% 100%;
+      float: left;
+      margin-top: 1px;
+    }
+  }
+  &.dark {
+    .switch__icon {
+      background: url('./assets/images/dark.png') no-repeat;
+      background-size: 100% 100%;
+      float: right;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+  }
+}
+</style>
 
-    &.active {
-      border-color: #409eff;
-      background-color: #409eff;
-      color: #fff;
+<style lang="scss">
+html.dark {
+  .doc-box {
+    a {
+      color: #cfd3dc;
+      &.router-link-active {
+        color: #409eff;
+      }
     }
-    &:first-child {
-      border-top-left-radius: $btn-radius;
-      border-bottom-left-radius: $btn-radius;
+    .switch {
+      border-color: #4c4d4f;
+      background-color: #2c2c2c;
     }
-    &:last-child {
-      border-top-right-radius: $btn-radius;
-      border-bottom-right-radius: $btn-radius;
+    .markdown-body {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #cfd3dc;
+      }
+      p {
+        color: #e5eaf3;
+      }
+      .preview-bottom {
+        background-color: #181818;
+      }
+      table {
+        color: #e5eaf3;
+        border-collapse: collapse;
+        code {
+          color: #e5eaf3;
+        }
+      }
+      table tr:nth-child(2n),
+      thead {
+        background-color: transparent !important;
+      }
+      pre.language-html {
+        background-color: #262727;
+      }
     }
   }
 }

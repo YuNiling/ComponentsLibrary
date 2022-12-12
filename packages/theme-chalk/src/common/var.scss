@@ -88,8 +88,22 @@ $button: map.merge(
     'height': 32px,
     'font-weight': 500,
     'padding': 8px 15px,
+    'text-color': #606266,
+    'bg-color': #fff,
+    'border-color': #dcdfe6,
   ),
   $button
 );
 
 $input: () !default;
+$input: map.merge(
+  (
+    'box-shadow-color': #dcdfe6,
+    'bg-color': #fff,
+    'text-color': #606266,
+    'disabled-bg-color': #f5f7fa,
+    'disabled-box-shadow-color': #e4e7ed,
+    'disabled-text-color': #a8abb2,
+  ),
+  $input
+);

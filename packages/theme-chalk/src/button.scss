@@ -12,15 +12,15 @@ $com: 'button' !default;
   height: getCssVar($com, 'height');
   white-space: nowrap;
   cursor: pointer;
-  color: getCssVar('text-color', 'regular');
+  color: getCssVar($com, text-color);
   text-align: center;
   box-sizing: border-box;
   outline: none;
   transition: 0.1s;
   font-weight: getCssVar($com, 'font-weight');
   vertical-align: middle;
-  background-color: getCssVar('bg-color');
-  border: 1px solid getCssVar('border-color', 'regular');
+  background-color: getCssVar($com, 'bg-color');
+  border: 1px solid getCssVar($com, 'border-color');
   padding: getCssVar($com, 'padding');
   border-radius: 4px;
 

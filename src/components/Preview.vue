@@ -39,7 +39,6 @@ const codeVisible = ref(false);
 
 onMounted(async () => {
   if (props.compName && props.demoName) {
-    console.log(`../../packages/components/${props.compName}/docs/${props.demoName}.vue?raw`);
     sourceCode.value = (
       await import(
         /* @vite-ignore */ `../../packages/components/${props.compName}/docs/${props.demoName}.vue?raw`
@@ -59,21 +58,23 @@ const showSourceCode = () => {
 .service-preview {
   border: 4px;
   border: 1px solid #dcd7e6;
-  padding: 10px 10px 0px;
+  // padding: 10px 10px 0px;
+  padding: 10px 0px 0px;
   .demo {
     padding-bottom: 20px;
-    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
     :deep(.fws-login) {
       height: 800px;
     }
   }
   .source-code {
-    padding: 20px 0;
     border-top: 1px solid #dcd7e6;
     overflow-y: auto;
     pre.language-html {
       margin: 0;
-      padding: 0 15px;
+      padding: 20px 15px;
       line-height: 0;
     }
   }
