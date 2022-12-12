@@ -7,6 +7,7 @@
     "prettier": "prettier --write  .",
     "build": "vue-tsc --noEmit && vite build --config ./build/base.config.ts",
     "build:lib": "vue-tsc --noEmit && vite build --config ./build/lib.config.ts",
+    "build:doc": "vue-tsc --noEmit && vite build --config ./build/doc.config.ts",
     "com:create": "node script/comp/create/command.js",
     "com:clean": "node script/comp/clean/command.js"
   },
