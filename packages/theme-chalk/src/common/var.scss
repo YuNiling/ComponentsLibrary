@@ -30,7 +30,7 @@ $colors: map.deep-merge(
       'light': #fab6b6,
       'lighter': #fef0f0,
     ),
-  ), 
+  ),
   $colors
 );
 
@@ -91,3 +91,5 @@ $button: map.merge(
   ),
   $button
 );
+
+$input: () !default;

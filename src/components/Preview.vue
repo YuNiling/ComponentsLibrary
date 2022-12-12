@@ -8,8 +8,8 @@
       <pre class="language-html"><code class="language-html">{{ sourceCode }}</code></pre>
     </div>
 
-    <div class="preview-bottom">
-      <span @click="showSourceCode">{{ codeVisible ? '隐藏代码' : '查看代码' }}</span>
+    <div class="preview-bottom" :class="{ 'is-fold': codeVisible }">
+      <span @click="showSourceCode">{{ codeVisible ? '隐藏源代码' : '查看源代码' }}</span>
     </div>
   </div>
 </template>
@@ -39,6 +39,7 @@ const codeVisible = ref(false);
 
 onMounted(async () => {
   if (props.compName && props.demoName) {
+    console.log(`../../packages/components/${props.compName}/docs/${props.demoName}.vue?raw`);
     sourceCode.value = (
       await import(
         /* @vite-ignore */ `../../packages/components/${props.compName}/docs/${props.demoName}.vue?raw`
@@ -58,7 +59,7 @@ const showSourceCode = () => {
 .service-preview {
   border: 4px;
   border: 1px solid #dcd7e6;
-  padding: 10px;
+  padding: 10px 10px 0px;
   .demo {
     padding-bottom: 20px;
     width: 100%;
@@ -77,7 +78,7 @@ const showSourceCode = () => {
     }
   }
   .preview-bottom {
-    height: 40px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,8 +90,40 @@ const showSourceCode = () => {
     right: 0;
     bottom: 0;
     z-index: 10;
+    font-size: 14px;
+    color: #909399;
+    span {
+      display: inline-block;
+      position: relative;
+      padding-left: 15px;
+      &::before {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border: 5px solid transparent;
+        border-top: 6px solid #909399;
+        position: absolute;
+        top: 9px;
+        left: 0px;
+      }
+    }
     &:hover {
       color: #409eff;
+      span::before {
+        border-top-color: #409eff;
+      }
+    }
+    &.is-fold {
+      span::before {
+        border-top: 0px solid transparent;
+        border-bottom: 6px solid #909399;
+      }
+      &:hover {
+        color: #409eff;
+        span::before {
+          border-bottom-color: #409eff;
+        }
+      }
     }
   }
 }

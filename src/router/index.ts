@@ -11,6 +11,12 @@ const routes = [
     path: '/components/Button',
     component: () => import('@packages/components/Button/docs/README.md'),
   },
+  {
+    title: '输入框',
+    name: 'Input',
+    path: '/components/Input',
+    component: () => import('@packages/components/Input/docs/README.md'),
+  },
 ];
 
 export default createRouter({

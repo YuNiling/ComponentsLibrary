@@ -5,7 +5,6 @@
 - 💪 Vue 3 Composition API
 - 🔥 Written in TypeScript
 
-
 ## 快速开始
 ```
 npm install

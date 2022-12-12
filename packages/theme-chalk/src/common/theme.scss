@@ -12,4 +12,5 @@
 
   // 组件
   @include set-component-css-var('button', $button);
+  @include set-component-css-var('input', $input);
 }

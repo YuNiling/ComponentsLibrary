@@ -5,5 +5,12 @@
     "compDesc": "这是一个按钮",
     "compClassName": "button",
     "compVariableName": "button"
+  },
+  {
+    "compName": "Input",
+    "compZhName": "输入框",
+    "compDesc": "通过鼠标或键盘输入字符",
+    "compClassName": "input",
+    "compVariableName": "input"
   }
 ]
