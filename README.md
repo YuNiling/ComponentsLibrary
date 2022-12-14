@@ -40,9 +40,9 @@
 ## 图片测试
 
 ### 基础图片引用
-![图片1](https://raw.githubusercontent.com/YuNiling/images/main/image2.jpg?token=GHSAT0AAAAAAB4DDDTQQM5LCLSZEFZRPCMUY4YIULQ)
+![图片1](https://raw.githubusercontent.com/YuNiling/images/main/img1.jpg?token=GHSAT0AAAAAAB4DDDTR5KPFT3Q4DYYOQIL2Y4ZGJLQ)
 
 ### 图片样式设置
 <center>
-<img src="https://raw.githubusercontent.com/YuNiling/images/main/image1.jpeg?token=GHSAT0AAAAAAB4DDDTRYKBLTGLU4NXHZS5GY4YIP6A" width="150" height="250" alt="图片2">
+<img src="https://raw.githubusercontent.com/YuNiling/images/main/image1.jpeg?token=GHSAT0AAAAAAB4DDDTRZFGOK3YGSRHKXIDIY4ZGKBQ" width="150" height="250" alt="图片2">
 </center>
