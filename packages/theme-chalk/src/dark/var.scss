@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../mixins/function.scss' as *;
+
+$button: () !default;
+$button: map.merge(
+  (
+    'border-radius': 20px,
+    'height': 32px,
+    'font-weight': 500,
+    'padding': 8px 15px,
+    'text-color': #cfd3dc,
+    'bg-color': transparent,
+    'border-color': #4c4d4f,
+  ),
+  $button
+);
+
+$input: () !default;
+$input: map.merge(
+  (
+    'box-shadow-color': #4c4d4f,
+    'bg-color': transparent,
+    'text-color': #cfd3dc,
+    'disabled-bg-color': #262727,
+    'disabled-box-shadow-color': #414243,
+    'disabled-text-color': #8d9095,
+  ),
+  $input
+);

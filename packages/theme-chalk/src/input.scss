@@ -1,0 +1,54 @@
+@use './common/var' as *;
+@use './mixins/config' as *;
+@use './mixins/function' as *;
+
+$com: 'input' !default;
+
+.#{$namespace}-#{$com} {
+  font-size: 14px;
+  line-height: 32px;
+  .yl-input__wrapper {
+    border-radius: 4px;
+    padding: 1px 11px;
+    box-shadow: 0 0 0 1px getCssVar($com, 'box-shadow-color');
+    background-color: getCssVar($com, 'bg-color');
+    &:hover {
+      box-shadow: 0 0 0 1px #c0c4cc inset;
+    }
+    &.is-focus {
+      box-shadow: 0 0 0 1px #409eff inset !important;
+    }
+    .yl-input__inner {
+      color: getCssVar($com, 'text-color');
+      width: 100%;
+      height: 30px;
+      padding: 0;
+      background: none;
+      border: none;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: getCssVar($com, 'disabled-text-color');
+      }
+    }
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+    .yl-input__wrapper {
+      background-color: getCssVar($com, 'disabled-bg-color');
+      box-shadow: 0 0 0 1px getCssVar($com, 'disabled-box-shadow-color');
+      &:hover {
+        box-shadow: 0 0 0 1px getCssVar($com, 'disabled-box-shadow-color');
+      }
+      .yl-input__inner {
+        cursor: not-allowed;
+        color: getCssVar($com, 'disabled-text-color');
+        &::placeholder {
+          color: getCssVar($com, 'disabled-text-color');
+        }
+      }
+    }
+  }
+}
