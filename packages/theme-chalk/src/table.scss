@@ -1,0 +1,40 @@
+@use './common/var' as *;
+@use './mixins/config' as *;
+@use './mixins/function' as *;
+
+$com: 'table' !default;
+
+.#{$namespace}-#{$com} {
+  width: 100%;
+  & > table {
+    width: 100%;
+    tr {
+      border: none;
+      .yl-table__cell {
+        border: none;
+        border-bottom: 1px solid #ebeef5;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #ebeef5;
+      }
+    }
+    .cell {
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      word-break: break-all;
+      line-height: 23px;
+      padding: 0 12px;
+    }
+    thead {
+      color: #909399;
+      font-size: 14px;
+    }
+    tbody {
+      color: #606266;
+      font-size: 14px;
+    }
+  }
+}

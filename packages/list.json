@@ -12,5 +12,12 @@
     "compDesc": "通过鼠标或键盘输入字符",
     "compClassName": "input",
     "compVariableName": "input"
+  },
+  {
+    "compName": "Table",
+    "compZhName": "表格",
+    "compDesc": "默认：这是一个新组件",
+    "compClassName": "table",
+    "compVariableName": "table"
   }
 ]

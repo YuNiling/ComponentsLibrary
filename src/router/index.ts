@@ -17,6 +17,12 @@ const routes = [
     path: '/components/Input',
     component: () => import('@packages/components/Input/docs/README.md'),
   },
+  {
+    title: '表格',
+    name: 'Table',
+    path: '/components/Table',
+    component: () => import('@packages/components/Table/docs/README.md'),
+  },
 ];
 
 export default createRouter({
