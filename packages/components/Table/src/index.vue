@@ -3,7 +3,7 @@
     <table cellpadding="0" cellspacing="0">
       <thead>
         <tr class="yl-table__row">
-          <th class="yl-table__cell" v-for="(item, index) in headers" :key="index">
+          <th v-for="(item, index) in headers" :key="index" class="yl-table__cell">
             <div class="cell">{{ item.label }}</div>
           </th>
         </tr>
