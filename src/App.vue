@@ -81,6 +81,7 @@ const data = reactive({
       &.router-link-active {
         color: #409eff;
         background-color: rgba(64, 158, 255, 0.1);
+        border-radius: 8px;
       }
     }
   }
