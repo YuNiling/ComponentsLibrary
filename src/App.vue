@@ -47,7 +47,6 @@ const data = reactive({
 </script>
 
 <style lang="scss" scoped>
-$btn-radius: 3px;
 .doc-box {
   min-height: 100vh;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
@@ -70,7 +69,6 @@ $btn-radius: 3px;
   aside {
     width: 100px;
     padding: 15px;
-    border-right: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     & > a {
@@ -125,53 +123,6 @@ $btn-radius: 3px;
       float: right;
       border-radius: 50%;
       border: 1px solid black;
-    }
-  }
-}
-</style>
-
-<style lang="scss">
-html.dark {
-  .doc-box {
-    a {
-      color: #cfd3dc;
-      &.router-link-active {
-        color: #409eff;
-      }
-    }
-    .switch {
-      border-color: #4c4d4f;
-      background-color: #2c2c2c;
-    }
-    .markdown-body {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: #cfd3dc;
-      }
-      p {
-        color: #e5eaf3;
-      }
-      .preview-bottom {
-        background-color: #181818;
-      }
-      table {
-        color: #e5eaf3;
-        border-collapse: collapse;
-        code {
-          color: #e5eaf3;
-        }
-      }
-      table tr:nth-child(2n),
-      thead {
-        background-color: transparent !important;
-      }
-      pre.language-html {
-        background-color: #262727;
-      }
     }
   }
 }

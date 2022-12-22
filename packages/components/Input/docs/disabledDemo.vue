@@ -1,5 +1,5 @@
 <template>
-  <yl-input v-model="input" disabled placeholder="Please input2" />
+  <cl-input v-model="input" disabled placeholder="Please input2" />
 </template>
 
 <script lang="ts" setup>

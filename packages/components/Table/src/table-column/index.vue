@@ -1,12 +1,12 @@
 <template>
-  <!-- <tr v-for="(item, index) in tableData" :key="index" class="yl-table__row">
-    <td v-for="(itemProp, propIndex) in headers" :key="propIndex" class="yl-table__cell">
+  <!-- <tr v-for="(item, index) in tableData" :key="index" class="cl-table__row">
+    <td v-for="(itemProp, propIndex) in headers" :key="propIndex" class="cl-table__cell">
       <div class="cell">{{ item[itemProp.prop] }}</div>
     </td>
   </tr> -->
   <!-- <slot></slot> -->
-  <tr v-for="(item, index) in tableData" :key="index" class="yl-table__row">
-    <td class="yl-table__cell">
+  <tr v-for="(item, index) in tableData" :key="index" class="cl-table__row">
+    <td class="cl-table__cell">
       <div class="cell">
         <slot>{{ item[prop] }}</slot>
       </div>
@@ -16,7 +16,7 @@
 
 <script lang="ts">
 export default {
-  name: 'YlTableColumn',
+  name: 'ClTableColumn',
 };
 </script>
 

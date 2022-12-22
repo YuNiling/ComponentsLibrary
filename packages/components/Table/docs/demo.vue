@@ -1,9 +1,9 @@
 <template>
-  <yl-table :data="tableData" style="width: 100%">
-    <yl-table-column prop="date" label="Date" width="180" />
-    <yl-table-column prop="name" label="Name" width="180" />
-    <yl-table-column prop="address" label="Address" />
-  </yl-table>
+  <cl-table :data="tableData" style="width: 100%">
+    <cl-table-column prop="date" label="Date" width="180" />
+    <cl-table-column prop="name" label="Name" width="180" />
+    <cl-table-column prop="address" label="Address" />
+  </cl-table>
 </template>
 
 <script lang="ts" setup>

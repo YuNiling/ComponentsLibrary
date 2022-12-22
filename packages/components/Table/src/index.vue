@@ -1,16 +1,16 @@
 <template>
-  <div class="yl-table">
+  <div class="cl-table">
     <table cellpadding="0" cellspacing="0">
       <thead>
-        <tr class="yl-table__row">
-          <th class="yl-table__cell" v-for="(item, index) in headers" :key="index">
+        <tr class="cl-table__row">
+          <th v-for="(item, index) in headers" :key="index" class="cl-table__cell">
             <div class="cell">{{ item.label }}</div>
           </th>
         </tr>
       </thead>
       <tbody>
-        <!-- <tr v-for="(item, index) in data" :key="index" class="yl-table__row">
-          <td v-for="(itemProp, propIndex) in headers" :key="propIndex" class="yl-table__cell">
+        <!-- <tr v-for="(item, index) in data" :key="index" class="cl-table__row">
+          <td v-for="(itemProp, propIndex) in headers" :key="propIndex" class="cl-table__cell">
             <div class="cell">
               {{ item[itemProp.prop] }}
             </div>
@@ -24,7 +24,7 @@
 
 <script lang="ts">
 export default {
-  name: 'YlTable',
+  name: 'ClTable',
 };
 </script>
 
@@ -51,7 +51,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.yl-button {
+.cl-button {
   margin-right: 5px;
 }
 </style>

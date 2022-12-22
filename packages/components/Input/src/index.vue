@@ -1,18 +1,18 @@
 <template>
   <div
-    class="yl-input"
+    class="cl-input"
     :class="{
       'is-disabled': inputDisabled,
     }"
   >
     <div
-      class="yl-input__wrapper"
+      class="cl-input__wrapper"
       :class="{
         'is-focus': focused,
       }"
     >
       <input
-        class="yl-input__inner"
+        class="cl-input__inner"
         type="text"
         autocomplete="off"
         tabindex="0"
@@ -27,7 +27,7 @@
 
 <script lang="ts">
 export default {
-  name: 'YlInput',
+  name: 'ClInput',
 };
 </script>
 <script lang="ts" setup>

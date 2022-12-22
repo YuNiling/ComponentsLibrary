@@ -7,7 +7,7 @@ $com: 'input' !default;
 .#{$namespace}-#{$com} {
   font-size: 14px;
   line-height: 32px;
-  .yl-input__wrapper {
+  .cl-input__wrapper {
     border-radius: 4px;
     padding: 1px 11px;
     box-shadow: 0 0 0 1px getCssVar($com, 'box-shadow-color');
@@ -18,7 +18,7 @@ $com: 'input' !default;
     &.is-focus {
       box-shadow: 0 0 0 1px #409eff inset !important;
     }
-    .yl-input__inner {
+    .cl-input__inner {
       color: getCssVar($com, 'text-color');
       width: 100%;
       height: 30px;
@@ -36,13 +36,13 @@ $com: 'input' !default;
   }
   &.is-disabled {
     cursor: not-allowed;
-    .yl-input__wrapper {
+    .cl-input__wrapper {
       background-color: getCssVar($com, 'disabled-bg-color');
       box-shadow: 0 0 0 1px getCssVar($com, 'disabled-box-shadow-color');
       &:hover {
         box-shadow: 0 0 0 1px getCssVar($com, 'disabled-box-shadow-color');
       }
-      .yl-input__inner {
+      .cl-input__inner {
         cursor: not-allowed;
         color: getCssVar($com, 'disabled-text-color');
         &::placeholder {

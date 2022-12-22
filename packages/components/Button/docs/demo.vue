@@ -1,29 +1,29 @@
 <template>
   <div class="row">
-    <yl-button>Default</yl-button>
-    <yl-button type="primary">Primary</yl-button>
-    <yl-button type="success">Success</yl-button>
-    <yl-button type="info">Info</yl-button>
-    <yl-button type="warning">Warning</yl-button>
-    <yl-button type="danger">Danger</yl-button>
+    <cl-button>Default</cl-button>
+    <cl-button type="primary">Primary</cl-button>
+    <cl-button type="success">Success</cl-button>
+    <cl-button type="info">Info</cl-button>
+    <cl-button type="warning">Warning</cl-button>
+    <cl-button type="danger">Danger</cl-button>
   </div>
 
   <div class="row">
-    <yl-button plain>Plain</yl-button>
-    <yl-button type="primary" plain>Primary</yl-button>
-    <yl-button type="success" plain>Success</yl-button>
-    <yl-button type="info" plain>Info</yl-button>
-    <yl-button type="warning" plain>Warning</yl-button>
-    <yl-button type="danger" plain>Danger</yl-button>
+    <cl-button plain>Plain</cl-button>
+    <cl-button type="primary" plain>Primary</cl-button>
+    <cl-button type="success" plain>Success</cl-button>
+    <cl-button type="info" plain>Info</cl-button>
+    <cl-button type="warning" plain>Warning</cl-button>
+    <cl-button type="danger" plain>Danger</cl-button>
   </div>
 
   <div class="row">
-    <yl-button round>Round</yl-button>
-    <yl-button type="primary" round>Primary</yl-button>
-    <yl-button type="success" round>Success</yl-button>
-    <yl-button type="info" round>Info</yl-button>
-    <yl-button type="warning" round>Warning</yl-button>
-    <yl-button type="danger" round>Danger</yl-button>
+    <cl-button round>Round</cl-button>
+    <cl-button type="primary" round>Primary</cl-button>
+    <cl-button type="success" round>Success</cl-button>
+    <cl-button type="info" round>Info</cl-button>
+    <cl-button type="warning" round>Warning</cl-button>
+    <cl-button type="danger" round>Danger</cl-button>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
   margin-bottom: 20px;
 }
 
-.yl-button {
+.cl-button {
   margin-right: 15px;
 }
 </style>

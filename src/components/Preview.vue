@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import Prism from 'prismjs';
-import '../assets/prism.css';
+import '../assets/styles/prism/theme.scss';
 import { ref, onMounted, nextTick } from 'vue';
 
 const props = defineProps({
@@ -58,7 +58,6 @@ const showSourceCode = () => {
 .service-preview {
   border: 4px;
   border: 1px solid #dcd7e6;
-  // padding: 10px 10px 0px;
   padding: 10px 0px 0px;
   .demo {
     padding-bottom: 20px;

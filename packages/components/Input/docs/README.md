@@ -15,15 +15,15 @@ import disabledDemo from  './disabledDemo.vue'
 
 ## 禁用状态
 
-通过 disabled 属性指定是否禁用 input 组件
+通过 `disabled` 属性指定是否禁用 `input` 组件
 
 <Preview comp-name="Input" demo-name="disabledDemo">
   <disabled-demo />
 </Preview>
 
-# API
+## API
 
-## 属性
+### 属性
 
 |  参数   |      说明      |  类型   | 可选值 | 默认值 | 是否必填 |
 | :-----: | :------------: | :-----: | :----: | :----: | :------: |
