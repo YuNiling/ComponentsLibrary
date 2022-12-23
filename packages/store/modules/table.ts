@@ -1,11 +1,11 @@
 const state = () => ({
-  headers: [],
+  column: [],
   data: [],
 });
 
 const mutations = {
-  updateHeaders(state, obj) {
-    state.headers = obj;
+  updateColumn(state, obj) {
+    state.column = obj;
   },
   updateData(state, obj) {
     state.data = obj;

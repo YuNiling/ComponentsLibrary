@@ -4,13 +4,13 @@ import Store from './store/index';
 import Button from './components/Button';
 import Input from './components/Input';
 import Table from './components/Table';
-import TableColumn from './components/Table/src/table-column';
-// import TableColumn from './components/Table';
 
-const components = [Button, Input, Table, TableColumn];
+const components = [Button, Input, Table];
 const install = (app: App) => {
   components.forEach((comp) => {
-    app.component(comp.name, comp);
+    for (const component of [comp, ...Object.values(comp.childComp ?? {})]) {
+      app.component((component as any).name, component as any);
+    }
   });
   app.use(Store);
 };
