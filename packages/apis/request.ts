@@ -7,23 +7,28 @@ const service = axios.create({
   timeout: 20000,
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json',
-    Accept: '*/*',
-    'x-csrf-token': 'Mr4Q2hKmVMbsAhWE9YyIEmKN',
-    'X-Requested-With': 'XMLHttpRequest',
+    // 'Content-Type': 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    // Accept: '*/*',
+    // 'x-csrf-token': 'Mr4Q2hKmVMbsAhWE9YyIEmKN',
+    // 'X-Requested-With': 'XMLHttpRequest',
   },
 });
 
 // 请求拦截器，需要添加在请求头中加token
 service.interceptors.request.use(
   (config) => {
-    if (config.baseURL) {
-      config.baseURL = config.baseURL;
-    }
-    if (config.headers) {
-      config.headers = config.headers;
-      // config.headers.post['x-csrf-token'] = 'Mr4Q2hKmVMbsAhWE9YyIEmKN';
-    }
+    // if (config.baseURL) {
+    //   config.baseURL = config.baseURL;
+    // }
+    // if (config.headers) {
+    //   config.headers = config.headers;
+    //   // config.headers.post['x-csrf-token'] = 'Mr4Q2hKmVMbsAhWE9YyIEmKN';
+    // }
+    // if (config.data) {
+    //   config.data = config.data;
+    // }
+    // console.log(config);
     return config;
   },
   (error) => {

@@ -16,30 +16,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import { tableList } from '../../../apis/table';
-
-// const tableData = [
-//   {
-//     date: '2016-05-01',
-//     name: 'Tom1',
-//     address: 'No. 1, Grove St, Los Angeles',
-//   },
-//   {
-//     date: '2016-05-02',
-//     name: 'Tom2',
-//     address: 'No. 2, Grove St, Los Angeles',
-//   },
-//   {
-//     date: '2016-05-03',
-//     name: 'Tom3',
-//     address: 'No. 3, Grove St, Los Angeles',
-//   },
-//   {
-//     date: '2016-05-04',
-//     name: 'Tom4',
-//     address: 'No. 4, Grove St, Los Angeles',
-//   },
-// ];
+import { tableList, tableDelete } from '../../../apis/table';
 const tableData = ref([]);
 
 const editClick = (index: number, row) => {
@@ -48,20 +25,29 @@ const editClick = (index: number, row) => {
 };
 
 const removeClick = (index: number, row) => {
-  console.log('removeClick', index);
-  console.log(row);
+  tableDelete({
+    id: row.id,
+  }).then((res) => {
+    if (res.code === 200) {
+      console.log('删除成功!');
+      loadList();
+    }
+  });
 };
 
-onMounted(() => {
+const loadList = () => {
   tableList({
     pageNo: 1,
-    pageSize: 10,
+    pageSize: 5,
   }).then((res) => {
-    // console.log('res', res);
     if (res.code === 200) {
       tableData.value = res.data.list;
     }
   });
+};
+
+onMounted(() => {
+  loadList();
 });
 </script>
 
