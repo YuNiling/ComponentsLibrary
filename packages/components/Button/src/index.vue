@@ -1,13 +1,13 @@
 <template>
   <button
     type="button"
-    class="yl-button"
+    class="cl-button"
     :class="{
-      'yl-button--primary': type === 'primary',
-      'yl-button--success': type === 'success',
-      'yl-button--info': type === 'info',
-      'yl-button--warning': type === 'warning',
-      'yl-button--danger': type === 'danger',
+      'cl-button--primary': type === 'primary',
+      'cl-button--success': type === 'success',
+      'cl-button--info': type === 'info',
+      'cl-button--warning': type === 'warning',
+      'cl-button--danger': type === 'danger',
       'is-plain': plain,
       'is-round': round,
     }"
@@ -18,7 +18,7 @@
 
 <script lang="ts">
 export default {
-  name: 'YlButton',
+  name: 'ClButton',
 };
 </script>
 <script setup lang="ts">
