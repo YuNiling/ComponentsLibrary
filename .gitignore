@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 lib
+<<<<<<< HEAD
 docs
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 
 # Editor directories and files
 .vscode/*

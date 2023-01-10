@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "custom-components-library",
+=======
+  "name": "components-library",
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --config ./build/base.config.ts",
@@ -18,7 +22,10 @@
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
+<<<<<<< HEAD
     "@types/qs": "^6.9.7",
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "@vitejs/plugin-vue": "^3.0.3",
@@ -38,7 +45,10 @@
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.7.1",
     "prismjs": "^1.29.0",
+<<<<<<< HEAD
     "qs": "^6.11.0",
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
     "sass": "^1.54.5",
     "sass-loader": "^13.0.2",
     "typescript": "^4.7.4",

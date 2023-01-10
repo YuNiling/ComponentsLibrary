@@ -1,6 +1,10 @@
 @use 'config';
 
+<<<<<<< HEAD
 // joinVarName(('button', 'text-color')) => '--yl-button-text-color'
+=======
+// joinVarName(('button', 'text-color')) => '--cl-button-text-color'
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 @function joinVarName($list) {
   $name: '--' + config.$namespace;
   @each $item in $list {
@@ -11,12 +15,20 @@
   @return $name;
 }
 
+<<<<<<< HEAD
 // getCssVar('button', 'text-color') => var(--yl-button-text-color)
+=======
+// getCssVar('button', 'text-color') => var(--cl-button-text-color)
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 @function getCssVar($args...) {
   @return var(#{joinVarName($args)});
 }
 
+<<<<<<< HEAD
 // getCssVarName('button', 'text-color') => '--yl-button-text-color'
+=======
+// getCssVarName('button', 'text-color') => '--cl-button-text-color'
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 @function getCssVarName($args...) {
   @return joinVarName($args);
 }

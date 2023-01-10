@@ -47,7 +47,10 @@ const data = reactive({
 </script>
 
 <style lang="scss" scoped>
+<<<<<<< HEAD
 $btn-radius: 3px;
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 .doc-box {
   min-height: 100vh;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
@@ -70,7 +73,10 @@ $btn-radius: 3px;
   aside {
     width: 100px;
     padding: 15px;
+<<<<<<< HEAD
     border-right: 1px solid #ccc;
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
     display: flex;
     flex-direction: column;
     & > a {
@@ -83,6 +89,10 @@ $btn-radius: 3px;
       &.router-link-active {
         color: #409eff;
         background-color: rgba(64, 158, 255, 0.1);
+<<<<<<< HEAD
+=======
+        border-radius: 8px;
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
       }
     }
   }
@@ -129,6 +139,7 @@ $btn-radius: 3px;
   }
 }
 </style>
+<<<<<<< HEAD
 
 <style lang="scss">
 html.dark {
@@ -176,3 +187,5 @@ html.dark {
   }
 }
 </style>
+=======
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208

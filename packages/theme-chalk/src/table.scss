@@ -10,9 +10,19 @@ $com: 'table' !default;
     width: 100%;
     tr {
       border: none;
+<<<<<<< HEAD
       .yl-table__cell {
         border: none;
         border-bottom: 1px solid #ebeef5;
+=======
+      .cl-table__cell {
+        border: none;
+        border-bottom: 1px solid #ebeef5;
+        padding: 8px 0;
+      }
+      th {
+        text-align: left;
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
       }
       td {
         border: none;

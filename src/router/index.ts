@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { createRouter, createWebHashHistory } from 'vue-router';
+=======
+import { createRouter, createWebHistory } from 'vue-router';
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
 
 const routes = [
   {
@@ -26,7 +30,11 @@ const routes = [
 ];
 
 export default createRouter({
+<<<<<<< HEAD
   history: createWebHashHistory(),
+=======
+  history: createWebHistory(),
+>>>>>>> 410ec5cfcf005e23e799810ac52cc13d41d30208
   routes,
   scrollBehavior(to: any, from: any) {
     if (to.path !== from.path) {
